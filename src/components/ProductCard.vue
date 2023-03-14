@@ -5,6 +5,7 @@ defineProps(['item'])
 
 <template>
   <div
+    id="product-card"
     class="p-3 border rounded h-[300px] w-[200px] shadow-md cursor-pointer"
     @click="emit('productClick', item)"
   >
