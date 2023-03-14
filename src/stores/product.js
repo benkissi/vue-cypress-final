@@ -15,6 +15,9 @@ export const useProductStore = defineStore({
   actions: {
     toggleListFeature() {
       this.isEnabled = !this.isEnabled
+      if (!this.isEnabled) {
+        this.products = []
+      }
     },
 
     async fetchProducts() {
