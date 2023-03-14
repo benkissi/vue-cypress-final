@@ -238,6 +238,13 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@pinia/testing@^0.0.15":
+  version "0.0.15"
+  resolved "https://registry.yarnpkg.com/@pinia/testing/-/testing-0.0.15.tgz#d6aa75c56d2496c14d0eed67af566d661cfa5f6f"
+  integrity sha512-Ykz5sPUVDphDMssA27+ExPSzxqfn7Y3jax77KA0AChDB6ODu31CnXIwoiUG+U5WA6ey7gzHkZh8wlnAtzVnB8g==
+  dependencies:
+    vue-demi "*"
+
 "@rushstack/eslint-patch@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.2.0.tgz#8be36a1f66f3265389e90b5f9c9962146758f728"

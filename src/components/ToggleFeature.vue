@@ -9,6 +9,7 @@ const productStore = useProductStore()
 const { isEnabled } = storeToRefs(productStore)
 
 const handleFeatureToggle = () => {
+  console.log('toggle----')
   productStore.toggleListFeature()
 }
 </script>
