@@ -5,13 +5,14 @@ import { useRoute, useRouter } from 'vue-router'
 import { useProductStore } from '../stores/product'
 
 import Button from '../components/Button.vue'
+import Spinner from '../assets/Spinner.vue'
 
 const route = useRoute()
 const router = useRouter()
 const productStore = useProductStore()
 const id = route.params.id
 
-const { currentProduct } = storeToRefs(productStore)
+const { currentProduct, fetchingProduct } = storeToRefs(productStore)
 
 const handleRedirect = () => {
   router.push('/')
@@ -23,7 +24,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex p-5">
+  <div class="w-[100vw] h-[100vh] flex items-center justify-center" v-if="fetchingProduct">
+    <Spinner />
+  </div>
+
+  <div v-else class="flex p-5">
     <div class="w-[50%] h-[600px] relative">
       <img :src="currentProduct?.image" class="object-contain h-[100%] w-[100%]" />
     </div>

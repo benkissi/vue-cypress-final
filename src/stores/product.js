@@ -8,6 +8,7 @@ export const useProductStore = defineStore({
     products: [],
     currentProduct: null,
     fetchingProducts: false,
+    fetchingProduct: false,
     error: null
   }),
   getters: {},
